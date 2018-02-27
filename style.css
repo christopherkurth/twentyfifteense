@@ -1,0 +1,904 @@
+/*
+ Theme Name:   Twenty Fifteen SE
+ Theme URI:    https://github.com/christopherkurth/twentyfifteense
+ Description:  Child Theme vom WordPress Standart Theme Twenty Fifteen
+ Author:       Christopher Kurth
+ Author URI:   https://christopherkurth.com
+ Template:     twentyfifteen
+ Version:      20180227
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+ Text Domain: twentyfifteen
+*/
+
+/* --- Typography --- */
+
+  body,
+  button,
+  input,
+  select,
+  textarea {
+  font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  blockquote cite,
+  blockquote small {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  ::-webkit-input-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  :-moz-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  ::-moz-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  :-ms-input-placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  button,
+  input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .post-password-form label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .main-navigation .menu-item-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .post-navigation .meta-nav {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .post-navigation .post-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .pagination {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .image-navigation,
+  .comment-navigation {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .site-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .site-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .widget-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .widget_calendar caption {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .widget_rss .rss-date,
+  .widget_rss cite {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .author-heading {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .entry-footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .page-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .page-links {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .entry-caption {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .comments-title,
+  .comment-reply-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .comment-metadata,
+  .pingback .edit-link {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .comment-list .reply a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .comment-form label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .comment-notes,
+  .comment-awaiting-moderation,
+  .logged-in-as,
+  .form-allowed-tags {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .no-comments {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .form-allowed-tags code {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .wp-caption-text {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .gallery-caption {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  .widecolumn label,
+  .widecolumn .mu_register label {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+
+/* --- Allgemeine Anpassungen --- */
+  .site-header {
+    border-bottom: none;
+  }
+  .site-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+  /*.site-description {
+    display: block;
+    font-size: 11px;
+    font-size: 1.1rem;
+  }*/
+  .main-navigation .menu-item-description {
+    color: #323232;
+    color: rgba(50, 50, 50, 0.6);
+    line-height: 1.3;
+    margin-top: 0.3em;
+  }
+  .main-navigation ol {
+    list-style: none;
+    margin: 0;
+  }
+  .main-navigation ol ol {
+    display: none;
+    margin-left: 0.8em;
+  }
+  .main-navigation ol .toggled-on {
+    display: block;
+  }
+  .main-navigation li {
+    border-top: 1px solid #E2E2E2;
+    border-top: 1px solid rgba(226, 226, 226, 0.1);
+  }
+
+  .main-navigation .nav-menu > ol > li:first-child,
+  .main-navigation .nav-menu > li:first-child {
+    border-top: 0;
+  }
+
+  .no-js .main-navigation ol ol {
+    display: block;
+  }
+
+  .widget_archive a,
+  .widget_categories a,
+  .widget_links a,
+  .widget_meta a,
+  .widget_nav_menu a,
+  .widget_pages a,
+  .widget_recent_comments a,
+  .widget_recent_entries a,
+  .statify-widget a {
+    border: 0;
+  }
+
+  .widget_archive ul,
+  .widget_categories ul,
+  .widget_links ul,
+  .widget_meta ul,
+  .widget_nav_menu ul,
+  .widget_pages ul,
+  .widget_recent_comments ul,
+  .widget_recent_entries ul,
+  .statify-widget ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  .widget_archive li,
+  .widget_categories li,
+  .widget_links li,
+  .widget_meta li,
+  .widget_nav_menu li,
+  .widget_pages li,
+  .widget_recent_comments li,
+  .widget_recent_entries li,
+  .statify-widget li {
+    border-top: 1px solid #E2E2E2;
+    border-top: 1px solid rgba(226, 226, 226, 0.1);
+    padding: 0.7667em 0;
+  }
+
+  .widget_archive li:first-child,
+  .widget_categories li:first-child,
+  .widget_links li:first-child,
+  .widget_meta li:first-child,
+  .widget_nav_menu li:first-child,
+  .widget_pages li:first-child,
+  .widget_recent_comments li:first-child,
+  .widget_recent_entries li:first-child,
+  .statify-widget li:first-child {
+    border-top: 0;
+    padding-top: 0;
+  }
+
+  .widget_archive li:last-child,
+  .widget_categories li:last-child,
+  .widget_links li:last-child,
+  .widget_meta li:last-child,
+  .widget_nav_menu li:last-child,
+  .widget_pages li:last-child,
+  .widget_recent_comments li:last-child,
+  .widget_recent_entries li:last-child,
+  .statify-widget li:last-child {
+    padding-bottom: 0;
+  }
+
+  .widget_search .search-form:after {
+    position: absolute;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: "Genericons";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    speak: none;
+    text-align: center;
+    text-decoration: inherit;
+    text-transform: none;
+    vertical-align: top;
+    top: 0;
+    right: 0;
+    content: '\f400';
+    font-size: 24px;
+    z-index: 1;
+    padding: 6px;
+  }
+  .widget_search .search-form {
+  position: relative;
+  }
+  .widget_search .search-form .search-field {
+    background: none;
+    border: none;
+    padding-left: 0;
+    padding-right: 40px;
+  }
+  .widget_search .search-form .search-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    z-index: 10;
+  }
+  .widget_search .search-form:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '\f400';
+    font-size: 24px;
+    z-index: 1;
+    padding: 6px;
+  }
+  .search-form input[type="submit"],
+  .widget .search-form input[type="submit"] {
+    padding: 0;
+  }
+
+  .whereabouts-swarm-location {
+    display: block;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1em;
+  }
+
+  .whereabouts-swarm-location span.city {
+    font-weight: bold;
+  }
+
+  .whereabouts-swarm-location span.country {
+    font-style: italic;
+  }
+
+  .whereabouts-swarm-location:before {
+    content: '';
+    left: 0;
+    top: 4rem;
+    margin-bottom: -10px;
+    display: inline-block;
+    width: 36px;
+    height: 40px;
+    margin-right: 8px;
+    background: url(/wp-content/themes/twentyfifteen_ck/images/location.svg) no-repeat center center;
+    background-size: 40px 36px
+  }
+
+  .custom-logo {
+    display: none;
+  }
+
+  .entry-content a img.picture-link {
+    display: inline;
+  }
+
+  .entry-content a.picture-link {
+    border: none;
+  }
+
+  [data-language] code, [class^="lang"] code, pre [data-language], pre [class^="lang"] {
+    opacity: 1;
+    animation: none;
+  }
+
+  code.rainbow {
+    font-size: 0.88em;
+  }
+
+  /* .format-aside .format-image .format-video .format-quote .format-gallery .format-status .format-link .format-audio .format-chat */
+  .blog .format-image .entry-title {
+    display: none;
+  }
+
+  .entry-content .more-link:after,
+  .entry-summary .more-link:after {
+    content: "\f429";
+    font-size: 14px;
+    font-size: 1,4rem;
+    position: relative;
+    top: 7px;
+    margin-left: 4px;
+  }
+
+  span.cat-links {
+    display: none;
+  }
+
+  .icon-external-link a:after {
+    content: "\f442";
+    position: relative;
+    top: 0;
+  }
+
+  .format-aside .icon-format:before {
+    content: "\f101";
+  }
+
+  .format-image .icon-format:before {
+    content: "\f473";
+  }
+
+  .ckx-icon-format-image:before {
+    font-family: "Genericons";
+    content: "\f473";
+    margin-right: 0.5em;
+  }
+  .ckx-icon-format-gallery:before {
+    font-family: "Genericons";
+    content: "\f103";
+    margin-right: 0.5em;
+  }
+  .ckx-icon-format-status:before {
+    font-family: "Genericons";
+    content: "\f105";
+    margin-right: 0.5em;
+  }
+  .ckx-icon-format-aside:before {
+    font-family: "Genericons";
+    content: "\f101";
+    margin-right: 0.5em;
+  }
+  .ckx-icon-format-video:before {
+    font-family: "Genericons";
+    content: "\f104";
+    margin-right: 0.5em;
+  }
+  .ckx-icon-format-link:before {
+    font-family: "Genericons";
+    content: "\f107";
+    margin-right: 0.5em;
+  }
+
+/* --- Timeline für Lebenslauf --- */
+  .timeline {
+    margin: 2em auto;
+    position: relative;
+    max-width: 660px;
+  }
+  .timeline:before {
+    background-color: #888888;
+    content: '';
+    margin-left: -2px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 4px;
+    height: 100%;
+  }
+  .timeline-event {
+    position: relative;
+    list-style: none
+  }
+  .timeline-event:hover .timeline-event-icon {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #000000;
+  }
+  .timeline-event:hover .timeline-event-thumbnail {
+    -moz-box-shadow: inset 40em 0 0 0 #000000;
+    -webkit-box-shadow: inset 40em 0 0 0 #000000;
+    box-shadow: inset 40em 0 0 0 #000000;
+  }
+  .timeline-event-copy {
+    padding: 2em 2em 0.4em;
+    position: relative;
+    top: -1.875em;
+    left: 2em;
+    width: 80%;
+  }
+  .timeline-event-copy h3 {
+    font-size: 2em !important;
+    font-weight: 200;
+    letter-spacing: 0.04em;
+    margin-top: 1.8em;
+  }
+  .timeline-event-copy h4 {
+    font-size: 1.4em;
+    font-weight: 200;
+    margin-top: -2em;
+    margin-bottom: 1.6em;
+  }
+  .timeline-event-copy p:not(.timeline-event-thumbnail) {
+    padding-bottom: 0.2em;
+  }
+  .timeline-event-icon {
+    -moz-transition: -moz-transform 0.2s ease-in;
+    -o-transition: -o-transform 0.2s ease-in;
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: black;
+    outline: 10px solid white;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 1em;
+    height: 1em;
+  }
+  .timeline-event-thumbnail {
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 0.75em;
+    background-color: #888888;
+    -moz-box-shadow: inset 0 0 0 0em #73C269;
+    -webkit-box-shadow: inset 0 0 0 0em #73C269;
+    box-shadow: inset 0 0 0 0em #73C269;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
+  }
+
+/* --- Media Queries --- */
+  /* --- Mobile Large 620px --- */
+    @media screen and (min-width: 38.75em){
+      .site-title {
+          font-size: 18px;
+          font-size: 1.8rem;
+          font-weight: lighter;
+          line-height: 1.0909;
+      }
+    }
+
+  /* --- Tablet Small 740px --- */
+    @media screen and (min-width: 46.25em){
+      .site-title {
+          font-size: 28px;
+          font-size: 2.8rem;
+          font-weight: bold;
+          line-height: 1.2069;
+      }
+      .main-navigation {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      .main-navigation .menu-item-description {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.3385;
+        margin-top: 0.2077em;
+      }
+      .hentry,
+      .page-header,
+      .page-content {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      }
+      .site-footer {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      .post-navigation {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      .pagination {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      }
+
+      .comments-area {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      }
+      .widecolumn {
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+
+  /* --- Tablet Large 880px --- */
+    @media screen and (min-width: 55em){
+      .site-title {
+          font-size: 28px;
+          font-size: 2.8rem;
+          line-height: 1.25;
+      }
+      .main-navigation {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      .main-navigation .menu-item-description {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.3385;
+        margin-top: 0.2077em;
+      }
+    }
+  /* --- Desktop Small 955px --- */
+    @media screen and (min-width: 59.6875em){
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      body:before {
+        box-shadow: none;
+      }
+      blockquote {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      .image-navigation .nav-previous a:before,
+      .image-navigation .nav-next a:after,
+      .comment-navigation .nav-previous a:before,
+      .comment-navigation .nav-next a:after {
+        font-size: 14px;
+      }
+      .custom-logo {
+        display: inline;
+        max-height: 122px;
+      }
+      .site-branding {
+        text-align: center;
+      }
+      .site-title {
+        font-size: 20px;
+        font-size: 2.0rem;
+        line-height: 1.3636;
+      }
+      .site-description {
+        font-size: 10px;
+        font-size: 1.0rem;
+      }
+      .entry-title,
+      .widecolumn h2 {
+        font-size: 28px;
+        font-size: 2.8rem;
+      }
+      .entry-content h1,
+      .entry-summary h1,
+      .page-content h1,
+      .comment-content h1 {
+        font-size: 28px;
+        font-size: 2.8rem;
+      }
+      .entry-content h2,
+      .entry-summary h2,
+      .page-content h2,
+      .comment-content h2 {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .entry-content h3,
+      .entry-summary h3,
+      .page-content h3,
+      .comment-content h3 {
+        font-size: 20px;
+        font-size: 2.0rem;
+      }
+      .entry-content h4,
+      .entry-summary h4,
+      .page-content h4,
+      .comment-content h4 {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      .entry-content h5,
+      .entry-content h6,
+      .entry-summary h5,
+      .entry-summary h6,
+      .page-content h5,
+      .page-content h6,
+      .comment-content h5,
+      .comment-content h6 {
+        font-size: 15px;
+        font-size: 1.5rem;
+      }
+      .entry-content .more-link:after,
+      .entry-summary .more-link:after {
+        font-size: 14px;
+      }
+      .entry-footer {
+        padding: 3% 10%;
+      }
+      .main-navigation {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      .main-navigation .menu-item-description {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.3385;
+        margin-top: 0.2077em;
+      }
+    }
+  /* --- Desktop Medium 1100px --- */
+    @media screen and (min-width: 68.75em){
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      blockquote {
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+      .image-navigation .nav-previous a:before,
+      .image-navigation .nav-next a:after,
+      .comment-navigation .nav-previous a:before,
+      .comment-navigation .nav-next a:after {
+        font-size: 16px;
+      }
+      .site-branding {
+          text-align: center;
+      }
+      .site-title {
+          font-size: 22px;
+          font-size: 2.2rem;
+          line-height: 1.1667;
+      }
+      .site-description {
+          font-size: 10px;
+          font-size: 1.0rem;
+      }
+      .entry-title,
+      .widecolumn h2 {
+        font-size: 28px;
+        font-size: 2.8rem;
+      }
+      .entry-content h1,
+      .entry-summary h1,
+      .page-content h1,
+      .comment-content h1 {
+        font-size: 28px;
+        font-size: 2.8rem;
+      }
+      .entry-content h2,
+      .entry-summary h2,
+      .page-content h2,
+      .comment-content h2 {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .entry-content h3,
+      .entry-summary h3,
+      .page-content h3,
+      .comment-content h3 {
+        font-size: 20px;
+        font-size: 2.0rem;
+      }
+      .entry-content h4,
+      .entry-summary h4,
+      .page-content h4,
+      .comment-content h4 {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      .entry-content h5,
+      .entry-content h6,
+      .entry-summary h5,
+      .entry-summary h6,
+      .page-content h5,
+      .page-content h6,
+      .comment-content h5,
+      .comment-content h6 {
+        font-size: 15px;
+        font-size: 1.5rem;
+      }
+      .entry-content .more-link:after,
+      .entry-summary .more-link:after {
+        font-size: 14px;
+      }
+      .main-navigation {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      .main-navigation .menu-item-description {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.3385;
+        margin-top: 0.2077em;
+      }
+      .pagination .prev:before,
+      .pagination .next:before {
+        height: 52px;
+        line-height: 52px;
+        width: 52px;
+      }
+      .pagination .prev, .pagination .next {
+        height: 52px;
+        padding: 0;
+        width: 52px;
+      }
+    }
+  /* --- Desktop Large 1240px --- */
+    @media screen and (min-width: 77.5em){
+      body,
+      button,
+      input,
+      select,
+      textarea {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      blockquote {
+        font-size: 18px;
+        font-size: 1.8rem;
+      }
+      .image-navigation .nav-previous a:before,
+      .image-navigation .nav-next a:after,
+      .comment-navigation .nav-previous a:before,
+      .comment-navigation .nav-next a:after {
+        font-size: 14px;
+      }
+      .site-branding {
+          text-align: center;
+      }
+      .site-title {
+          font-size: 24px;
+          font-size: 2.4rem;
+          line-height: 1.1852;
+      }
+      .site-description {
+          font-size: 12px;
+          font-size: 1.2rem;
+      }
+      .post-password-form label,
+      .post-navigation .meta-nav,
+      .comment-navigation,
+      .image-navigation,
+      .author-heading,
+      .author-bio,
+      .entry-footer,
+      .page-links a,
+      .page-links span,
+      .comment-metadata,
+      .pingback .edit-link,
+      .comment-list .reply,
+      .comment-notes,
+      .comment-awaiting-moderation,
+      .logged-in-as,
+      .comment-form label,
+      .form-allowed-tags,
+      .site-info,
+      .wp-caption-text,
+      .gallery-caption,
+      .entry-caption,
+      .widecolumn label,
+      .widecolumn .mu_register label {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      .entry-title,
+      .widecolumn h2 {
+        font-size: 28px;
+        font-size: 2.8rem;
+      }
+      .entry-content h1,
+      .entry-summary h1,
+      .page-content h1,
+      .comment-content h1 {
+        font-size: 28px;
+        font-size: 2.8rem;
+      }
+      .entry-content h2,
+      .entry-summary h2,
+      .page-content h2,
+      .comment-content h2 {
+        font-size: 24px;
+        font-size: 2.4rem;
+      }
+      .entry-content h3,
+      .entry-summary h3,
+      .page-content h3,
+      .comment-content h3 {
+        font-size: 20px;
+        font-size: 2.0rem;
+      }
+      .entry-content h4,
+      .entry-summary h4,
+      .page-content h4,
+      .comment-content h4 {
+        font-size: 16px;
+        font-size: 1.6rem;
+      }
+      .entry-content h5,
+      .entry-content h6,
+      .entry-summary h5,
+      .entry-summary h6,
+      .page-content h5,
+      .page-content h6,
+      .comment-content h5,
+      .comment-content h6 {
+        font-size: 15px;
+        font-size: 1.5rem;
+      }
+      .entry-content .more-link:after,
+      .entry-summary .more-link:after {
+        font-size: 14px;
+      }
+      .main-navigation {
+        font-size: 14px;
+        font-size: 1.4rem;
+      }
+      .main-navigation .menu-item-description {
+        font-size: 12px;
+        font-size: 1.2rem;
+        line-height: 1.3385;
+        margin-top: 0.2077em;
+      }
+      .pagination .prev:before,
+      .pagination .next:before {
+        height: 54px;
+        line-height: 54px;
+        width: 54px;
+      }
+      .pagination .prev, .pagination .next {
+        height: 54px;
+        padding: 0;
+        width: 54px;
+      }
+    }
+  /* --- Desktop X-Large 1403px --- */
+    @media screen and (min-width: 87.6875em) {
+
+    }
