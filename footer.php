@@ -22,7 +22,7 @@
 				 */
 				do_action( 'twentyfifteen_credits' );
 			?>
-			CC-BY-SA 2012 &ndash; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><br /><small><a href="https://christopherkurth.com/impressum/">Impressum &amp; Datenschutzerklärung</a></small>
+			CC-BY-SA 2012 &ndash; <?php echo date("Y"); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a><br /><small><a href="https://christopherkurth.com/impressum/">Impressum</a> | <a href="https://christopherkurth.com/datenschutz/">Datenschutzerklärung</a></small>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
