@@ -11,12 +11,12 @@ function tfse_color_schemes( $schemes ) {
     $schemes['tfse'] = array(
         'label'  => __( 'Twenty Fifteen SE', 'twentyfifteen' ),
         'colors' => array(
-            '#F3F4F5', // Hintergrundfarbe
-            '#F3F4F5', // Seitenleiste Hintergrundfarbe
+            '#F2F3F4', // Hintergrundfarbe
+            '#F2F3F4', // Seitenleiste Hintergrundfarbe
             '#FFFFFF', // Box Hintergrundfarbe
-            '#000000', // Text und Link Farbe
-            '#000000', // Seitenleiste Text und Link Farbe
-            '#F8F8F8', // Meta Box Hintergrundfarbe
+            '#141414', // Text und Link Farbe
+            '#141414', // Seitenleiste Text und Link Farbe
+            '#F0F0F0', // Meta Box Hintergrundfarbe
         ),
     );
 
@@ -29,6 +29,18 @@ function tfse_color_schemes( $schemes ) {
             '#141414', // Text und Link Farbe
             '#141414', // Seitenleiste Text und Link Farbe
             '#F0F0F0', // Meta Box Hintergrundfarbe 1BBB71
+        ),
+    );
+
+    $schemes['tfseminimal'] = array(
+        'label'  => __( 'Twenty Fifteen SE Minimal', 'twentyfifteen' ),
+        'colors' => array(
+            '#FFFFFF', // Hintergrundfarbe
+            '#FFFFFF', // Seitenleiste Hintergrundfarbe
+            '#FFFFFF', // Box Hintergrundfarbe
+            '#222222', // Text und Link Farbe
+            '#222222', // Seitenleiste Text und Link Farbe
+            '#F0F0F0', // Meta Box Hintergrundfarbe
         ),
     );
     return $schemes;

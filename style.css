@@ -4,9 +4,8 @@
  Author:       Christopher Kurth
  Author URI:   https://christopherkurth.com
  Theme URI:    https://github.com/christopherkurth/twentyfifteense
- GitHub Plugin URI: https://github.com/christopherkurth/twentyfifteense
  Template:     twentyfifteen
- Version:      20180410
+ Version:      20180412
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -129,6 +128,12 @@ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
 .widecolumn label,
 .widecolumn .mu_register label {
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+code,
+pre {
+  font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+  font-size: 0.84em;
 }
 
 /* --- Allgemeine Anpassungen --- */
@@ -380,6 +385,23 @@ span.byline {
   margin-right: 0.5em;
 }
 
+dl dt {
+  font-size: 1em;
+  font-weight: 700;
+  font-style: italic;
+}
+
+dl dd {
+  padding-top: .2em;
+  padding-left: 2.2em;
+}
+
+/* --- Startseite --- */
+
+.home .entry-header {
+  display: none;
+}
+
 /* --- Media Queries --- */
 /* --- Mobile Large 620px --- */
   @media screen and (min-width: 38.75em){
@@ -389,7 +411,6 @@ span.byline {
         font-weight: 600;
         line-height: 1.0909;
     }
-  }
 
 /* --- Tablet Small 740px --- */
   @media screen and (min-width: 46.25em){
@@ -409,28 +430,22 @@ span.byline {
       line-height: 1.3385;
       margin-top: 0.2077em;
     }
+
     .hentry,
     .page-header,
-    .page-content {
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    }
-    .site-footer {
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    }
-
-    .post-navigation {
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    }
-
-    .pagination {
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    }
-
-    .comments-area {
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
-    }
+    .page-content,
+    .site-footer,
+    .post-navigation,
+    .pagination,
+    .comments-area,
     .widecolumn {
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 8px 0 rgba(34, 34, 34, 0.08);
+    }
+
+    .home .page,
+    .home .page-header,
+    .home .page-content {
+      box-shadow: none;
     }
   }
 
