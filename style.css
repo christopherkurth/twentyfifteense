@@ -4,9 +4,8 @@
  Author:       Christopher Kurth
  Author URI:   https://christopherkurth.com
  Theme URI:    https://github.com/christopherkurth/TwentyFifteenSE
- GitHub Theme URI: https://github.com/christopherkurth/TwentyFifteenSE
  Template:     twentyfifteen
- Version:      201804130020
+ Version:      201804130045
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -434,7 +433,8 @@ dl dd {
   width: 62px;
 	top: 0px;
   left: -1px;
-  background-color: #2eec96;
+  background-color: #222222;
+  color: #f0f0f0;
 }
 
 /* --- Startseite --- */
