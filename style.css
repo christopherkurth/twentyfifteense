@@ -5,7 +5,7 @@
  Author URI:   https://christopherkurth.com
  Theme URI:    https://github.com/christopherkurth/twentyfifteense
  Template:     twentyfifteen
- Version:      201804122300
+ Version:      201804130020
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -396,6 +396,46 @@ dl dd {
   padding-left: 2.2em;
 }
 
+.secondary-toggle {
+	background-color: transparent;
+	border: 1px solid #f0f0f0;
+	border: 1px solid rgba(240, 240, 240, 0.4);
+	height: 42px;
+	width: 62px;
+}
+
+.secondary-toggle:before {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	font-size: 12px;
+  font-weight: 700;
+}
+
+.secondary-toggle:before {
+	color: #333;
+	content: "MENÜ";
+	line-height: 40px;
+  width: 62px;
+  letter-spacing: 0.046875em;
+}
+
+.secondary-toggle:hover,
+.secondary-toggle:focus {
+	background-color: transparent;
+	border: 1px solid #2eec96;
+	border: 1px solid rgba(46, 236, 150, 0.6);
+	outline: 0;
+}
+
+.secondary-toggle.toggled-on:before {
+  content: "MENÜ";
+  font-size: 12px;
+  position: relative;
+  width: 62px;
+	top: 0px;
+  left: -1px;
+  background-color: #2eec96;
+}
+
 /* --- Startseite --- */
 
 .home .entry-header {
@@ -411,6 +451,12 @@ dl dd {
         font-weight: 600;
         line-height: 1.0909;
     }
+    .home .page,
+    .home .page-header,
+    .home .page-content {
+      box-shadow: none;
+    }
+  }
 
 /* --- Tablet Small 740px --- */
   @media screen and (min-width: 46.25em){
