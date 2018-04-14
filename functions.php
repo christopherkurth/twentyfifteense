@@ -20,26 +20,14 @@ function tfse_color_schemes( $schemes ) {
         ),
     );
 
-    $schemes['tfsegreen'] = array(
-        'label'  => __( 'Twenty Fifteen SE Green', 'twentyfifteen' ),
-        'colors' => array(
-            '#2EEC96', // Hintergrundfarbe
-            '#2EEC96', // Seitenleiste Hintergrundfarbe
-            '#FFFFFF', // Box Hintergrundfarbe
-            '#141414', // Text und Link Farbe
-            '#141414', // Seitenleiste Text und Link Farbe
-            '#F0F0F0', // Meta Box Hintergrundfarbe 1BBB71
-        ),
-    );
-
     $schemes['tfseminimal'] = array(
         'label'  => __( 'Twenty Fifteen SE Minimal', 'twentyfifteen' ),
         'colors' => array(
             '#FFFFFF', // Hintergrundfarbe
             '#FFFFFF', // Seitenleiste Hintergrundfarbe
             '#FFFFFF', // Box Hintergrundfarbe
-            '#222222', // Text und Link Farbe
-            '#222222', // Seitenleiste Text und Link Farbe
+            '#444444', // Text und Link Farbe
+            '#444444', // Seitenleiste Text und Link Farbe
             '#F0F0F0', // Meta Box Hintergrundfarbe
         ),
     );
