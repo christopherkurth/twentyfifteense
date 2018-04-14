@@ -5,7 +5,7 @@
  Author URI:   https://christopherkurth.com
  GitHub Theme URI: https://github.com/christopherkurth/TwentyFifteenSE
  Template:     twentyfifteen
- Version:      201804130100
+ Version:      201804140300
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -437,12 +437,6 @@ dl dd {
   color: #f0f0f0;
 }
 
-/* --- Startseite --- */
-
-.home .entry-header {
-  display: none;
-}
-
 /* --- Media Queries --- */
 /* --- Mobile Large 620px --- */
   @media screen and (min-width: 38.75em){
@@ -452,10 +446,19 @@ dl dd {
         font-weight: 600;
         line-height: 1.0909;
     }
-    .home .page,
-    .home .page-header,
-    .home .page-content {
+    .page,
+    .page-header,
+    .page-content {
       box-shadow: none;
+    }
+
+    .entry-footer {
+      padding: 2% 9.0909% 8%;
+      background: rgb(240,240,240);
+      background: -moz-linear-gradient(top, rgba(240,240,240,1) 44%, rgba(255,255,255,1) 100%);
+      background: -webkit-linear-gradient(top, rgba(240,240,240,1) 44%,rgba(255,255,255,1) 100%);
+      background: linear-gradient(to bottom, rgba(240,240,240,1) 44%,rgba(255,255,255,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0 );
     }
   }
 
@@ -482,16 +485,8 @@ dl dd {
     .page-header,
     .page-content,
     .site-footer,
-    .post-navigation,
-    .pagination,
     .comments-area,
     .widecolumn {
-      box-shadow: 0 0 8px 0 rgba(34, 34, 34, 0.08);
-    }
-
-    .home .page,
-    .home .page-header,
-    .home .page-content {
       box-shadow: none;
     }
   }
