@@ -23,9 +23,9 @@ function tfse_color_schemes( $schemes ) {
     $schemes['tfseminimal'] = array(
         'label'  => __( 'Twenty Fifteen SE Minimal', 'twentyfifteen' ),
         'colors' => array(
-            '#FFFFFF', // Hintergrundfarbe
             '#FFFFFF', // Seitenleiste Hintergrundfarbe
             '#FFFFFF', // Box Hintergrundfarbe
+            '#FFFFFF', // Hintergrundfarbe
             '#444444', // Text und Link Farbe
             '#444444', // Seitenleiste Text und Link Farbe
             '#F0F0F0', // Meta Box Hintergrundfarbe
@@ -77,3 +77,73 @@ function twentyfifteen_child_add_async_attribute( $tag, $handle ) {
     return str_replace( ' src', ' async defer src', $tag );
 }
 add_filter( 'script_loader_tag', 'twentyfifteen_child_add_async_attribute', 10, 2 );
+
+/**
+ * Lebensalter berechnen und ausgeben [ckx_age birthday="dd.mm.yy"]
+ */
+function ckx_altersberechnung_function( $atts, $content = null )
+{
+    $age = '';
+
+    extract( shortcode_atts( array(
+        'birthday' => '',
+        'prefix' => '',
+        'postfix' => ''
+    ), $atts ) );
+
+    $dateFormat  = "d.m.Y";
+    $datePattern = '/^([123]0|[012][1-9]|31).(0[1-9]|1[012]).(19[0-9]{2}|2[0-9]{3})$/';
+    if (preg_match($datePattern, $birthday, $matches))  {
+        $day   = $matches[1];
+        $month = $matches[2];
+        $year  = $matches[3];
+        $actDate = explode(".", date($dateFormat));
+
+        $age = $actDate[2] - $year;
+        if ($actDate[1] < $month ||
+            ($actDate[1] == $month && $actDate[0] < intval($day))) {
+            $age--;
+        }
+        $age = $prefix . $age . $postfix;
+    }
+    return $age;
+}
+
+add_shortcode('ckx_age', 'ckx_altersberechnung_function');
+
+/**
+ * Kommentar Anzahl ausgeben mit Shortcode: [ckx_beitragsanzahl]
+ */
+function ckx_beitragsanzahl_function(){
+   $art_count = wp_count_posts('post');
+   $nr_art =  $art_count->publish;
+     
+   return $nr_art;
+}
+
+add_shortcode('ckx_beitragsanzahl', 'ckx_beitragsanzahl_function' );
+
+/**
+ * Kommentar Anzahl ausgeben mit Shortcode: [ckx_kommentaranzahl]
+ */
+function ckx_kommentaranzahl_function(){
+    $comments_count = wp_count_comments();
+    $nr_komm =  $comments_count->approved;
+     
+    return $nr_komm; 
+}
+
+add_shortcode('ckx_kommentaranzahl', 'ckx_kommentaranzahl_function' );
+
+/**
+ * Eine E-Mail-Adresse die mit dem Shortcode [ckx_mail]Adresse[/ckx_mail] übergeben wird, kann anschließen von vielen Spam-Bots nicht mehr aus dem HTML-Code ausgelesen werden.
+ */
+function ckx_email_verschleiern_function( $atts , $content = null ) {
+	if ( ! is_email( $content ) ) {
+		return;
+	}
+
+	return '<a href="mailto:' . antispambot( $content ) . '">' . antispambot( $content ) . '</a>';
+}
+
+add_shortcode( 'ckx_mail', 'ckx_email_verschleiern_function' );
