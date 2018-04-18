@@ -5,7 +5,7 @@
  Author URI:   https://christopherkurth.com
  GitHub Theme URI: https://github.com/christopherkurth/twentyfifteense
  Template:     twentyfifteen
- Version:      201804171310
+ Version:      2018-04-18_1330
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -523,6 +523,10 @@ textarea {
 	border-top: 1px solid rgba(240, 240, 240, 0.1);
 }
 
+.site-info {
+  text-align: center;
+}
+
 /* --- Media Queries --- */
 /* --- Mobile Large 620px --- */
   @media screen and (min-width: 38.75em){
@@ -532,19 +536,22 @@ textarea {
         font-weight: 600;
         line-height: 1.0909;
     }
-    .page,
+
+    .secondary {
+      box-shadow: none;
+    }
+
+    .hentry,
     .page-header,
-    .page-content {
+    .page-content,
+    .site-footer,
+    .comments-area,
+    .widecolumn {
       box-shadow: none;
     }
 
     .entry-footer {
       padding: 2% 9.0909% 8%;
-      background: rgb(240,240,240);
-      background: -moz-linear-gradient(top, rgba(240,240,240,1) 44%, rgba(255,255,255,1) 100%);
-      background: -webkit-linear-gradient(top, rgba(240,240,240,1) 44%,rgba(255,255,255,1) 100%);
-      background: linear-gradient(to bottom, rgba(240,240,240,1) 44%,rgba(255,255,255,1) 100%);
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#ffffff',GradientType=0 );
     }
   }
 
@@ -565,15 +572,6 @@ textarea {
       font-size: 1.2rem;
       line-height: 1.3385;
       margin-top: 0.2077em;
-    }
-
-    .hentry,
-    .page-header,
-    .page-content,
-    .site-footer,
-    .comments-area,
-    .widecolumn {
-      box-shadow: none;
     }
   }
 
@@ -596,7 +594,7 @@ textarea {
     }
     .uses-list {
 		margin-top: 5rem
-	}
+    }
   }
 /* --- Desktop Small 955px --- */
   @media screen and (min-width: 59.6875em){

@@ -22,7 +22,7 @@
 				 */
 				do_action( 'twentyfifteen_credits' );
 			?>
-			<a href="impressum/#creativecommons"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/image/cc-icon-cc.svg" height="24px" width="24px" alt="Creative Commons"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/image/cc-icon-by.svg" height="24px" width="24px" alt="Namensnennung"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/image/cc-icon-sa.svg" height="24px" width="24px" alt="Weitergabe unter gleichen Bedingungen"></a> <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> | created with &#9825; by <a href="https://eria.studio">eria.studio</a><br /><small><a href="<?php echo esc_url( home_url( '/' ) ); ?>impressum/">Impressum</a> | <a href="<?php echo esc_url( home_url( '/' ) ); ?>datenschutz/">Datenschutzerklärung</a></small>
+			<a href="impressum/#creativecommons"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/image/cc-icon-cc.svg" height="32px" width="32px" alt="Creative Commons"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/image/cc-icon-by.svg" height="32px" width="32px" alt="Namensnennung"><img src="<?php echo esc_url( get_theme_file_uri() ); ?>/image/cc-icon-sa.svg" height="32px" width="32px" alt="Weitergabe unter gleichen Bedingungen"></a><br /><br /><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> | created with &#9825; by <a href="https://eria.studio">eria.studio</a><br /><br /><small><a href="<?php echo esc_url( home_url( '/' ) ); ?>impressum/">Impressum</a> | <a href="<?php echo esc_url( home_url( '/' ) ); ?>datenschutz/">Datenschutzerklärung</a></small>
 		</div><!-- .site-info -->
 	</footer><!-- .site-footer -->
 
