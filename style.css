@@ -5,7 +5,7 @@
  Author URI:   https://christopherkurth.com
  GitHub Theme URI: https://github.com/christopherkurth/twentyfifteense
  Template:     twentyfifteen
- Version:      2018-04-18_1330
+ Version:      2018-04-20_1220
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
@@ -525,6 +525,11 @@ textarea {
 
 .site-info {
   text-align: center;
+}
+
+article .post-thumbnail {
+	background: #f8f8f8;
+	background: linear-gradient(to bottom, #dedede, #e4e4e4, #ebebeb, #f1f1f1, #f8f8f8);
 }
 
 /* --- Media Queries --- */
