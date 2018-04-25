@@ -147,3 +147,11 @@ function ckx_email_verschleiern_function( $atts , $content = null ) {
 }
 
 add_shortcode( 'ckx_mail', 'ckx_email_verschleiern_function' );
+
+/**
+ * Speichern der IP Adresse in zukünftigen Kommentaren verhindern
+ */
+function  wpb_remove_commentsip( $comment_author_ip ) {
+	return '';
+	}
+add_filter( 'pre_comment_user_ip', 'wpb_remove_commentsip' );
