@@ -5,14 +5,16 @@
  Author URI:   https://christopherkurth.com
  GitHub Theme URI: https://github.com/christopherkurth/twentyfifteense
  Template:     twentyfifteen
- Version:      2018-04-25_2205
+ Version:      2018-05-05_1750
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
  Text Domain: twentyfifteen
 */
 
-/* --- Typography --- */
+/* --- Allgemeine Anpassungen --- */
+
+/* ------ Typography ------ */
 
 body,
 button,
@@ -136,171 +138,69 @@ pre {
   font-size: 0.84em;
 }
 
-/* --- Allgemeine Anpassungen --- */
-.site-header {
-  border-bottom: none;
-}
-.site-title {
-  font-size: 24px;
-  font-size: 2.4rem;
-}
+/* ------ Header ------ */
+
 .site-description {
   display: block;
-  font-size: 11px;
-  font-size: 1.1rem;
-  opacity: 1;
-}
-.main-navigation .menu-item-description {
-  color: #323232;
-  color: rgba(50, 50, 50, 0.6);
-  line-height: 1.3;
-  margin-top: 0.3em;
-}
-.main-navigation ol {
-  list-style: none;
-  margin: 0;
-}
-.main-navigation ol ol {
-  display: none;
-  margin-left: 0.8em;
-}
-.main-navigation ol .toggled-on {
-  display: block;
-}
-.main-navigation li {
-  border-top: 1px solid #E2E2E2;
-  border-top: 1px solid rgba(226, 226, 226, 0.1);
-}
-
-.main-navigation .nav-menu > ol > li:first-child,
-.main-navigation .nav-menu > li:first-child {
-  border-top: 0;
-}
-
-.no-js .main-navigation ol ol {
-  display: block;
-}
-
-.widget_archive a,
-.widget_categories a,
-.widget_links a,
-.widget_meta a,
-.widget_nav_menu a,
-.widget_pages a,
-.widget_recent_comments a,
-.widget_recent_entries a,
-.statify-widget a {
-  border: 0;
-}
-
-.widget_archive ul,
-.widget_categories ul,
-.widget_links ul,
-.widget_meta ul,
-.widget_nav_menu ul,
-.widget_pages ul,
-.widget_recent_comments ul,
-.widget_recent_entries ul,
-.statify-widget ul {
-  list-style: none;
-  margin: 0;
-}
-
-.widget_archive li,
-.widget_categories li,
-.widget_links li,
-.widget_meta li,
-.widget_nav_menu li,
-.widget_pages li,
-.widget_recent_comments li,
-.widget_recent_entries li,
-.statify-widget li {
-  border-top: 1px solid #E2E2E2;
-  border-top: 1px solid rgba(226, 226, 226, 0.1);
-  padding: 0.7667em 0;
-}
-
-.widget_archive li:first-child,
-.widget_categories li:first-child,
-.widget_links li:first-child,
-.widget_meta li:first-child,
-.widget_nav_menu li:first-child,
-.widget_pages li:first-child,
-.widget_recent_comments li:first-child,
-.widget_recent_entries li:first-child,
-.statify-widget li:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.widget_archive li:last-child,
-.widget_categories li:last-child,
-.widget_links li:last-child,
-.widget_meta li:last-child,
-.widget_nav_menu li:last-child,
-.widget_pages li:last-child,
-.widget_recent_comments li:last-child,
-.widget_recent_entries li:last-child,
-.statify-widget li:last-child {
-  padding-bottom: 0;
-}
-
-.widget_search .search-form:after {
-  position: absolute;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-family: "Genericons";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  speak: none;
-  text-align: center;
-  text-decoration: inherit;
-  text-transform: none;
-  vertical-align: top;
-  top: 0;
-  right: 0;
-  content: '\f400';
-  font-size: 24px;
-  z-index: 1;
-  padding: 6px;
-}
-.widget_search .search-form {
-position: relative;
-}
-.widget_search .search-form .search-field {
-  background: none;
-  border: none;
-  padding-left: 0;
-  padding-right: 40px;
-}
-.widget_search .search-form .search-submit {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  opacity: 0;
-  z-index: 10;
-}
-.widget_search .search-form:after {
-  position: absolute;
-  top: 0;
-  right: 0;
-  content: '\f400';
-  font-size: 24px;
-  z-index: 1;
-  padding: 6px;
-}
-.search-form input[type="submit"],
-.widget .search-form input[type="submit"] {
-  padding: 0;
 }
 
 .custom-logo {
   display: none;
+}
+
+/* ------ Navigation ------ */
+
+.secondary-toggle {
+  background-color: transparent;
+  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.4);
+  height: 42px;
+  width: 62px;
+}
+
+.secondary-toggle:before {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.secondary-toggle:before {
+  color: #444444;
+  content: "MENÜ";
+  line-height: 40px;
+  width: 62px;
+  letter-spacing: 0.046875em;
+}
+
+.secondary-toggle:hover,
+.secondary-toggle:focus {
+  background-color: transparent;
+  border: 1px solid #2eec96;
+  border: 1px solid rgba(46, 236, 150, 0.6);
+  outline: 0;
+}
+
+.secondary-toggle.toggled-on:before {
+  content: "MENÜ";
+  font-size: 12px;
+  position: relative;
+  width: 62px;
+  top: 0px;
+  left: -1px;
+  background-color: #444444;
+  color: #f0f0f0;
+}
+
+/* ------ Content ------ */
+
+article .post-thumbnail {
+  background: #f8f8f8;
+  background: linear-gradient(to bottom, #dedede, #e4e4e4, #ebebeb, #f1f1f1, #f8f8f8);
+
+}
+
+.page article .post-thumbnail {
+  background: none;
 }
 
 .entry-content a img.picture-link {
@@ -309,20 +209,6 @@ position: relative;
 
 .entry-content a.picture-link {
   border: none;
-}
-
-[data-language] code, [class^="lang"] code, pre [data-language], pre [class^="lang"] {
-  opacity: 1;
-  animation: none;
-}
-
-code.rainbow {
-  font-size: 0.88em;
-}
-
-/* .format-aside .format-image .format-video .format-quote .format-gallery .format-status .format-link .format-audio .format-chat */
-.blog .format-image .entry-title {
-  display: none;
 }
 
 .entry-content .more-link:after,
@@ -335,10 +221,50 @@ code.rainbow {
   margin-left: 4px;
 }
 
-span.cat-links,
-span.byline {
-  display: none;
+[data-language] code, [class^="lang"] code, pre [data-language], pre [class^="lang"] {
+  opacity: 1;
+  animation: none;
 }
+
+hr {
+  background-color: #f0f0f0;
+  height: 2px;
+  margin: 4em 2em;
+}
+
+pre {
+  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.1);
+}
+
+code.rainbow {
+  font-size: 0.88em;
+}
+
+table,
+th,
+td {
+  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.1);
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: #f0f0f0;
+}
+
+input,
+textarea {
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
+  border: 1px solid #f0f0f0;
+  border: 1px solid rgba(240, 240, 240, 0.1);
+  color: #444444;
+  color: rgba(68, 68, 68, 0.7);
+}
+
+/* ------ Icons ------ */
 
 .icon-external-link a:after {
   content: "\f442";
@@ -385,6 +311,12 @@ span.byline {
   margin-right: 0.5em;
 }
 
+/* ------ Description List ------ */
+
+dl {
+
+}
+
 dt {
   
 }
@@ -393,99 +325,49 @@ dd {
   padding-left: 2em;
 }
 
-.secondary-toggle {
-	background-color: transparent;
-	border: 1px solid #f0f0f0;
-	border: 1px solid rgba(240, 240, 240, 0.4);
-	height: 42px;
-	width: 62px;
+/* ------ Spezieller Listentyp ------ */
+
+.spec-list {
+  margin: 0;
+  list-style: none;
+  margin-top: 3rem
 }
 
-.secondary-toggle:before {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-	font-size: 12px;
-	font-weight: 700;
+.spec-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .75rem 0;
+  border-top: 1px solid #f0f0f0;
 }
 
-.secondary-toggle:before {
-	color: #444444;
-	content: "MENÜ";
-	line-height: 40px;
- 	width: 62px;
-	letter-spacing: 0.046875em;
+.spec-list li>* {
+  width: 50%
 }
 
-.secondary-toggle:hover,
-.secondary-toggle:focus {
-	background-color: transparent;
-	border: 1px solid #2eec96;
-	border: 1px solid rgba(46, 236, 150, 0.6);
-	outline: 0;
+.spec-list li .kategorie {
+  font-weight: 500;
 }
 
-.secondary-toggle.toggled-on:before {
-  content: "MENÜ";
-  font-size: 12px;
-  position: relative;
-  width: 62px;
-	top: 0px;
-  left: -1px;
-  background-color: #444444;
-  color: #f0f0f0;
+.spec-list li .links a {
+  color: #444444;
+  border-bottom: none;
 }
 
-.uses-list {
-	margin: 0;
-	list-style: none;
-	margin-top: 3rem
+.spec-list li .links a:active,
+.spec-list li .links a:focus,
+.spec-list li .links a:hover {
+  color: #2eec96;
 }
 
-.uses-list li {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	padding: .75rem 0;
-	border-top: 1px solid #f0f0f0;
-}
-
-.uses-list li>* {
-	width: 50%
-}
-
-.uses-list li .kategorie {
-	font-weight: 500;
-}
-
-.uses-list li .links a {
-	color: #444444;
-	border-bottom: none;
-}
-
-.uses-list li .links a:active,
-.uses-list li .links a:focus,
-.uses-list li .links a:hover {
-	color: #2eec96;
-}
-
-.uses-list li .links a:not(:first-child):before {
-	color: #444444;
-	content: " / "
-}
-
-hr {
-  background-color: #f0f0f0;
-	height: 2px;
-	margin: 4em 2em;
-}
-
-pre {
-  border: 1px solid #f0f0f0;
-	border: 1px solid rgba(240, 240, 240, 0.1);
+.spec-list li .links a:not(:first-child):before {
+  color: #444444;
+  content: " / "
 }
 
 abbr[title] {
-	border-bottom: 1px solid #f0f0f0;
-	border-bottom: 1px solid rgba(240, 240, 240, 0.1);
+  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(240, 240, 240, 0.1);
 }
 
 mark,
@@ -494,47 +376,10 @@ ins {
   background-color: rgba(46, 236, 150, 0.5);
 }
 
-table,
-th,
-td {
-  border: 1px solid #f0f0f0;
-	border: 1px solid rgba(240, 240, 240, 0.1);
-}
-
-button,
-input,
-select,
-textarea {
-  background-color: #f0f0f0;
-}
-
-input,
-textarea {
-	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
-  border: 1px solid #f0f0f0;
-	border: 1px solid rgba(240, 240, 240, 0.1);
-	color: #444444;
-	color: rgba(68, 68, 68, 0.7);
-}
-
-.post-navigation,
-.post-navigation div + div {
-	border-top: 1px solid #f0f0f0;
-	border-top: 1px solid rgba(240, 240, 240, 0.1);
-}
+/* ------ Footer ------ */
 
 .site-info {
   text-align: center;
-}
-
-article .post-thumbnail {
-	background: #f8f8f8;
-	background: linear-gradient(to bottom, #dedede, #e4e4e4, #ebebeb, #f1f1f1, #f8f8f8);
-
-}
-
-.page article .post-thumbnail {
-  background: none;
 }
 
 /* --- Media Queries --- */
@@ -602,26 +447,14 @@ article .post-thumbnail {
       line-height: 1.3385;
       margin-top: 0.2077em;
     }
-    .uses-list {
-		margin-top: 5rem
+    .spec-list {
+    margin-top: 5rem
     }
   }
 /* --- Desktop Small 955px --- */
   @media screen and (min-width: 59.6875em){
-    body,
-    button,
-    input,
-    select,
-    textarea {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
     body:before {
       box-shadow: none;
-    }
-    blockquote {
-      font-size: 16px;
-      font-size: 1.6rem;
     }
     .image-navigation .nav-previous a:before,
     .image-navigation .nav-next a:after,
@@ -636,75 +469,8 @@ article .post-thumbnail {
     .site-branding {
       text-align: center;
     }
-    .site-title {
-      font-size: 20px;
-      font-size: 2.0rem;
-      line-height: 1.3636;
-    }
-    .site-description {
-      font-size: 10px;
-      font-size: 1.0rem;
-    }
-    .entry-title,
-    .widecolumn h2 {
-      font-size: 28px;
-      font-size: 2.8rem;
-    }
-    .entry-content h1,
-    .entry-summary h1,
-    .page-content h1,
-    .comment-content h1 {
-      font-size: 28px;
-      font-size: 2.8rem;
-    }
-    .entry-content h2,
-    .entry-summary h2,
-    .page-content h2,
-    .comment-content h2 {
-      font-size: 24px;
-      font-size: 2.4rem;
-    }
-    .entry-content h3,
-    .entry-summary h3,
-    .page-content h3,
-    .comment-content h3 {
-      font-size: 20px;
-      font-size: 2.0rem;
-    }
-    .entry-content h4,
-    .entry-summary h4,
-    .page-content h4,
-    .comment-content h4 {
-      font-size: 16px;
-      font-size: 1.6rem;
-    }
-    .entry-content h5,
-    .entry-content h6,
-    .entry-summary h5,
-    .entry-summary h6,
-    .page-content h5,
-    .page-content h6,
-    .comment-content h5,
-    .comment-content h6 {
-      font-size: 15px;
-      font-size: 1.5rem;
-    }
-    .entry-content .more-link:after,
-    .entry-summary .more-link:after {
-      font-size: 14px;
-    }
     .entry-footer {
       padding: 2% 10%;
-    }
-    .main-navigation {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
-    .main-navigation .menu-item-description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      line-height: 1.3385;
-      margin-top: 0.2077em;
     }
   }
 /* --- Desktop Medium 1100px --- */
