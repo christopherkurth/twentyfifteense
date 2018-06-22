@@ -14,8 +14,8 @@ function tfse_color_schemes( $schemes ) {
             '#F2F3F4', // Hintergrundfarbe
             '#F2F3F4', // Seitenleiste Hintergrundfarbe
             '#FFFFFF', // Box Hintergrundfarbe
-            '#141414', // Text und Link Farbe
-            '#141414', // Seitenleiste Text und Link Farbe
+            '#444444', // Text und Link Farbe
+            '#444444', // Seitenleiste Text und Link Farbe
             '#F0F0F0', // Meta Box Hintergrundfarbe
         ),
     );
@@ -34,12 +34,16 @@ function tfse_color_schemes( $schemes ) {
     return $schemes;
 }
 
-/**
- * Remove the Google font CSS of Twenty Fifteen.
- */
+// --- Google Font CSS aus Twenty Fifteen entfernen ---
 function twentyfifteen_child_dequeue_google_font() {
     wp_dequeue_style( 'twentyfifteen-fonts' );
     wp_deregister_style( 'twentyfifteen-fonts' );
 }
 add_action( 'wp_enqueue_scripts', 'twentyfifteen_child_dequeue_google_font', 100 );
 
+// --- zusätzliches Menü registrieren ---
+register_nav_menus(
+	array(
+		'footer'  => esc_html__( 'Footer Menu', 'twentyfifteen' ),
+    )
+);
