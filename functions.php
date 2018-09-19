@@ -23,12 +23,23 @@ function tfse_color_schemes( $schemes ) {
     $schemes['tfseminimal'] = array(
         'label'  => __( 'Twenty Fifteen SE Minimal', 'twentyfifteen' ),
         'colors' => array(
+            '#FFFFFF', // Hintergrundfarbe
             '#FFFFFF', // Seitenleiste Hintergrundfarbe
             '#FFFFFF', // Box Hintergrundfarbe
-            '#FFFFFF', // Hintergrundfarbe
-            '#444444', // Text und Link Farbe
-            '#444444', // Seitenleiste Text und Link Farbe
+            '#2A2A2A', // Text und Link Farbe
+            '#2A2A2A', // Seitenleiste Text und Link Farbe
             '#F0F0F0', // Meta Box Hintergrundfarbe
+        ),
+    );
+    $schemes['tfsedark'] = array(
+        'label'  => __( 'Twenty Fifteen SE Dark', 'twentyfifteen' ),
+        'colors' => array(
+            '#263238', // Hintergrundfarbe
+            '#263238', // Seitenleiste Hintergrundfarbe
+            '#FFFFFF', // Box Hintergrundfarbe
+            '#2A2A2A', // Text und Link Farbe
+            '#F1EA82', // Seitenleiste Text und Link Farbe
+            '#F1F1F1', // Meta Box Hintergrundfarbe
         ),
     );
     return $schemes;

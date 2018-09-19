@@ -5,16 +5,19 @@
  Author URI:   https://christopherkurth.com
  GitHub Theme URI: https://github.com/christopherkurth/twentyfifteense
  Template:     twentyfifteen
- Version:      1.1.0
+ Version:      1.2.0
  License:      GNU General Public License v2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Tags: Child Theme, Twenty Fifteen, black, blue, white, dark, two-columns, left-sidebar, fixed-layout, responsive-layout, accessibility-ready, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
  Text Domain: twentyfifteen
 */
 
-/* --- Allgemeine Anpassungen --- */
-
 /* ------ Typography ------ */
+
+@font-face { font-family: 'tfse-icons';
+  src: url('/ckx2015se/wp-content/themes/twentyfifteense/font/tfse-icon.woff')  format('woff'),
+  url('/ckx2015se/wp-content/themes/twentyfifteense/font/tfse-icon.woff2')  format('woff2'); 
+}
 
 body,
 button,
@@ -22,6 +25,7 @@ input,
 select,
 textarea {
   font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility;
 }
 blockquote cite,
 blockquote small {
@@ -131,76 +135,203 @@ input[type="submit"] {
 .widecolumn .mu_register label {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
-
 code,
 pre {
   font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
   font-size: 0.84em;
 }
 
-/* ------ Header ------ */
+/* --- Media Queries --- */
+/* --- Mobile Large 620px | @media screen and (min-width: 38.75em) --- */
+/* --- Tablet Small 740px | @media screen and (min-width: 46.25em) --- */
+/* --- Tablet Large 880px | @media screen and (min-width: 55em) --- */
+/* --- Desktop Small 955px | @media screen and (min-width: 59.6875em) --- */
+/* --- Desktop Medium 1100px | @media screen and (min-width: 68.75em) --- */
+/* --- Desktop Large 1240px | @media screen and (min-width: 77.5em) --- */
+/* --- Desktop X-Large 1403px | @media screen and (min-width: 87.6875em) --- */
+
+  @media screen and (min-width: 59.6875em){
+    body:before {
+      box-shadow: none;
+    }
+  }
+
+/* ------ Header / Sidebar ------ */
+.site-header {
+  border-bottom: none;
+}
+
+.site-branding {
+  padding-right: 80px;
+}
+  @media screen and (min-width: 38.75em){
+    .site-branding {
+      padding-right: unset;
+    }
+  }
+  @media screen and (min-width: 46.25em){
+    .site-branding {
+      text-align: center;
+    }
+  }
+
+.site-title {
+  font-size: 20px;
+  font-size: 2.0rem;
+  font-weight: 600;
+  text-rendering: optimizeLegibility;
+}
+  @media screen and (min-width: 374px){
+    .site-title {
+      font-size: 22px;
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 2;
+    }
+  }
+  @media screen and (min-width: 38.75em){
+    .site-title {
+        font-size: 28px;
+        font-size: 2.8rem;
+        font-weight: 500;
+        line-height: 1.0909;
+    }
+  }
+  @media screen and (min-width: 46.25em){
+    .site-title {
+      font-size: 28px;
+      font-size: 2.8rem;
+      font-weight: 500;
+      line-height: 1.2069;
+    }
+  }
+  @media screen and (min-width: 55em){
+    .site-title {
+        font-size: 20px;
+        font-size: 2.0rem;
+        line-height: 1.25;
+    }
+  }
+  @media screen and (min-width: 59.6875em){
+    .site-title {
+      font-size: 22px;
+      font-size: 2.2rem;
+      line-height: 1.18;
+    }
+  }
 
 .site-description {
-  display: block;
+  display: none;
 }
+  @media screen and (min-width: 55em) {
+    .site-description {
+      display: block;
+      font-size: 12px;
+      font-size: 1.2rem;
+      text-rendering: optimizeLegibility;
+    }
+  }
+  @media screen and (min-width: 59.6875em){
+    .site-description {
+      font-size: 11px;
+      font-size: 1.1rem;
+    }
+  }
+  @media screen and (min-width: 68.75em){
+    .site-description {
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+  }
 
 .custom-logo {
   display: none;
 }
+  @media screen and (min-width: 59.6875em){
+    .custom-logo {
+      display: inline;
+      max-height: 124px;
+    }
+  }
+
+.secondary {
+  box-shadow: none;
+}
 
 /* ------ Navigation ------ */
-
 .secondary-toggle {
   background-color: transparent;
-  border: 1px solid #f0f0f0;
-  border: 1px solid rgba(240, 240, 240, 0.4);
   height: 42px;
   width: 62px;
 }
-
 .secondary-toggle:before {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 12px;
   font-weight: 700;
 }
-
 .secondary-toggle:before {
-  color: #444444;
-  content: "MENÜ";
+  content: "MENU";
   line-height: 40px;
   width: 62px;
   letter-spacing: 0.046875em;
 }
-
+:lang(de) .secondary-toggle:before {
+  content: "MENÜ";
+}
 .secondary-toggle:hover,
 .secondary-toggle:focus {
   background-color: transparent;
-  border: 1px solid #2eec96;
-  border: 1px solid rgba(46, 236, 150, 0.6);
   outline: 0;
 }
-
 .secondary-toggle.toggled-on:before {
-  content: "MENÜ";
+  content: "MENU";
   font-size: 12px;
   position: relative;
   width: 62px;
   top: 0px;
   left: -1px;
-  background-color: #444444;
-  color: #f0f0f0;
 }
+:lang(de) .secondary-toggle.toggled-on:before {
+  content: "MENÜ";
+}
+
+.main-navigation ul,
+.main-navigation li {
+  border-top: none;
+  border-bottom: none;
+}
+
+  @media screen and (min-width: 46.25em){
+    .main-navigation {
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+    .main-navigation .menu-item-description {
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 1.3385;
+      margin-top: 0.2077em;
+    }
+  }
+
+  @media screen and (min-width: 55em){
+    .main-navigation {
+      font-size: 14px;
+      font-size: 1.4rem;
+    }
+  }
+
+  @media screen and (min-width: 59.6875em){
+    .main-navigation .menu-item-description {
+      display: none;
+    }
+  }
 
 /* ------ Content ------ */
 
-article .post-thumbnail {
-  background: #f8f8f8;
-  background: linear-gradient(to bottom, #dedede, #e4e4e4, #ebebeb, #f1f1f1, #f8f8f8);
-
-}
-
-.page article .post-thumbnail {
-  background: none;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 800;
+  text-rendering: optimizeLegibility;
 }
 
 .entry-content a img.picture-link {
@@ -216,55 +347,248 @@ article .post-thumbnail {
   content: "\f429";
   font-size: 14px;
   font-size: 1,4rem;
+  font-weight: 500;
   position: relative;
   top: 7px;
   margin-left: 4px;
+}
+
+.alignfull,
+.alignwide {
+	left: 50%;
+	max-width: 825px;
+	position: relative;
+	transform: translate(-50%);
+	width: 100vw;
 }
 
 [data-language] code, [class^="lang"] code, pre [data-language], pre [class^="lang"] {
   opacity: 1;
   animation: none;
 }
-
-hr {
-  background-color: #f0f0f0;
-  height: 2px;
-  margin: 4em 2em;
-}
-
-pre {
-  border: 1px solid #f0f0f0;
-  border: 1px solid rgba(240, 240, 240, 0.1);
-}
-
 code.rainbow {
   font-size: 0.88em;
 }
 
-table,
-th,
-td {
-  border: 1px solid #f0f0f0;
-  border: 1px solid rgba(240, 240, 240, 0.1);
+/* Description List */
+dl {
+
+}
+dt {
+  
+}
+dd {
+  padding-left: 2em;
 }
 
-button,
-input,
-select,
-textarea {
-  background-color: #f0f0f0;
+  @media screen and (min-width: 38.75em){
+    .hentry,
+    .page-header,
+    .page-content,
+    .site-footer,
+    .comments-area,
+    .widecolumn {
+      box-shadow: none;
+    }
+  }
+  @media screen and (min-width: 59.6875em){
+    .image-navigation .nav-previous a:before,
+    .image-navigation .nav-next a:after,
+    .comment-navigation .nav-previous a:before,
+    .comment-navigation .nav-next a:after {
+      font-size: 14px;
+    }
+  }
+  @media screen and (min-width: 68.75em){
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+    blockquote {
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+    .image-navigation .nav-previous a:before,
+    .image-navigation .nav-next a:after,
+    .comment-navigation .nav-previous a:before,
+    .comment-navigation .nav-next a:after {
+      font-size: 16px;
+    }
+    .entry-title,
+    .widecolumn h2 {
+      font-size: 28px;
+      font-size: 2.8rem;
+    }
+    .entry-content h1,
+    .entry-summary h1,
+    .page-content h1,
+    .comment-content h1 {
+      font-size: 28px;
+      font-size: 2.8rem;
+    }
+    .entry-content h2,
+    .entry-summary h2,
+    .page-content h2,
+    .comment-content h2 {
+      font-size: 24px;
+      font-size: 2.4rem;
+    }
+    .entry-content h3,
+    .entry-summary h3,
+    .page-content h3,
+    .comment-content h3 {
+      font-size: 20px;
+      font-size: 2.0rem;
+    }
+    .entry-content h4,
+    .entry-summary h4,
+    .page-content h4,
+    .comment-content h4 {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+    .entry-content h5,
+    .entry-content h6,
+    .entry-summary h5,
+    .entry-summary h6,
+    .page-content h5,
+    .page-content h6,
+    .comment-content h5,
+    .comment-content h6 {
+      font-size: 15px;
+      font-size: 1.5rem;
+    }
+    .entry-content .more-link:after,
+    .entry-summary .more-link:after {
+      font-size: 14px;
+    }
+    .main-navigation {
+      font-size: 15px;
+      font-size: 1.5rem;
+    }
+    .main-navigation .menu-item-description {
+      font-size: 12px;
+      font-size: 1.2rem;
+      line-height: 1.3385;
+      margin-top: 0.2077em;
+    }
+    .pagination .prev:before,
+    .pagination .next:before {
+      height: 52px;
+      line-height: 52px;
+      width: 52px;
+    }
+    .pagination .prev, .pagination .next {
+      height: 52px;
+      padding: 0;
+      width: 52px;
+    }
+  }
+  @media screen and (min-width: 77.5em){
+    body,
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+      font-size: 1.6rem;
+    }
+    blockquote {
+      font-size: 18px;
+      font-size: 1.8rem;
+    }
+    .image-navigation .nav-previous a:before,
+    .image-navigation .nav-next a:after,
+    .comment-navigation .nav-previous a:before,
+    .comment-navigation .nav-next a:after {
+      font-size: 14px;
+    }
+  }
+
+/* ------ Footer ------ */
+
+.site-info {
+  text-align: center;
 }
 
-input,
-textarea {
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)); /* Removing the inner shadow on iOS inputs */
-  border: 1px solid #f0f0f0;
-  border: 1px solid rgba(240, 240, 240, 0.1);
-  color: #444444;
-  color: rgba(68, 68, 68, 0.7);
+.site-footer .footer-menu {
+  text-align: center;
+  margin-top: 8px;
 }
+
+.site-footer .footer-menu li {
+  margin-bottom: 5px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: small;
+}
+  @media screen and (min-width: 38.75em){
+    .site-footer .footer-menu li {
+      display: inline-block;
+      margin: 0 5px;
+    }
+  }
+
+  @media screen and (min-width: 38.75em){
+    .entry-footer {
+      padding: 2% 9.0909% 8%;
+    }
+  }
+  @media screen and (min-width: 59.6875em){
+    .entry-footer {
+      padding: 2% 10%;
+    }
+  }
+
+/* ------ sonstige Anpassungen ------ */
 
 /* ------ Icons ------ */
+
+.social-navigation a[href*="instagram.com"]:before {
+  font-family: tfse-icons;
+  content: "i";
+}
+.social-navigation a[href*="linkedin.com"]:before {
+  font-family: tfse-icons;
+  content: "l";
+}
+.social-navigation a[href*="facebook.com"]:before {
+  font-family: tfse-icons;
+  content: "f";
+}
+.social-navigation a[href*="plus.google.com"]:before {
+  font-family: tfse-icons;
+  content: "g";
+}
+.social-navigation a[href*="youtube.com"]:before {
+  font-family: tfse-icons;
+  content: "y";
+}
+.social-navigation a[href*="github.com"]:before {
+  font-family: tfse-icons;
+  content: "s";
+}
+.social-navigation a[href*="/podcast"]:before {
+  font-family: tfse-icons;
+  content: "c";
+}
+.social-navigation a[href*="pixelfed.social"]:before {
+  font-family: tfse-icons;
+  content: "p";
+}
+.social-navigation a[href*="dewp.space"]:before {
+  font-family: tfse-icons;
+  content: "m";
+}
+.social-navigation a[href*="xing.com"]:before {
+  font-family: tfse-icons;
+  content: "x";
+}
 
 .icon-external-link a:after {
   content: "\f442";
@@ -275,11 +599,9 @@ textarea {
 .format-aside .icon-format:before {
   content: "\f101";
 }
-
 .format-image .icon-format:before {
   content: "\f473";
 }
-
 .ckx-icon-format-image:before {
   font-family: "Genericons";
   content: "\f473";
@@ -311,417 +633,3 @@ textarea {
   margin-right: 0.5em;
 }
 
-/* ------ Description List ------ */
-
-dl {
-
-}
-
-dt {
-  
-}
-
-dd {
-  padding-left: 2em;
-}
-
-/* ------ Spezieller Listentyp ------ */
-
-.spec-list {
-  margin: 0;
-  list-style: none;
-  margin-top: 3rem
-}
-
-.spec-list li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: .75rem 0;
-  border-top: 1px solid #f0f0f0;
-}
-
-.spec-list li>* {
-  width: 50%
-}
-
-.spec-list li .kategorie {
-  font-weight: 500;
-}
-
-.spec-list li .links a {
-  color: #444444;
-  border-bottom: none;
-}
-
-.spec-list li .links a:active,
-.spec-list li .links a:focus,
-.spec-list li .links a:hover {
-  color: #2eec96;
-}
-
-.spec-list li .links a:not(:first-child):before {
-  color: #444444;
-  content: " / "
-}
-
-abbr[title] {
-  border-bottom: 1px solid #f0f0f0;
-  border-bottom: 1px solid rgba(240, 240, 240, 0.1);
-}
-
-mark,
-ins {
-  background-color: #2eec96;
-  background-color: rgba(46, 236, 150, 0.5);
-}
-
-/* ------ Footer ------ */
-
-.site-info {
-  text-align: center;
-}
-
-.site-footer .footer-menu {
-  text-align: center;
-  margin-top: 8px;
-}
-
-.site-footer .footer-menu li {
-  margin-bottom: 5px;
-  list-style: none;
-  padding-left: 0;
-  margin: 0;
-  font-size: small;
-}
-
-/* --- Media Queries --- */
-/* --- Mobile Large 620px --- */
-  @media screen and (min-width: 38.75em){
-    .site-title {
-        font-size: 22px;
-        font-size: 2.2rem;
-        font-weight: 600;
-        line-height: 1.0909;
-    }
-
-    .secondary {
-      box-shadow: none;
-    }
-
-    .hentry,
-    .page-header,
-    .page-content,
-    .site-footer,
-    .comments-area,
-    .widecolumn {
-      box-shadow: none;
-    }
-
-    .entry-footer {
-      padding: 2% 9.0909% 8%;
-    }
-
-    .site-footer .footer-menu li {
-      display: inline-block;
-      margin: 0 5px;
-    }
-  }
-
-/* --- Tablet Small 740px --- */
-  @media screen and (min-width: 46.25em){
-    .site-title {
-        font-size: 28px;
-        font-size: 2.8rem;
-        font-weight: bold;
-        line-height: 1.2069;
-    }
-    .main-navigation {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
-    .main-navigation .menu-item-description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      line-height: 1.3385;
-      margin-top: 0.2077em;
-    }
-  }
-
-/* --- Tablet Large 880px --- */
-  @media screen and (min-width: 55em){
-    .site-title {
-        font-size: 28px;
-        font-size: 2.8rem;
-        line-height: 1.25;
-    }
-    .main-navigation {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
-    .main-navigation .menu-item-description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      line-height: 1.3385;
-      margin-top: 0.2077em;
-    }
-    .spec-list {
-    margin-top: 5rem
-    }
-  }
-/* --- Desktop Small 955px --- */
-  @media screen and (min-width: 59.6875em){
-    body:before {
-      box-shadow: none;
-    }
-    .image-navigation .nav-previous a:before,
-    .image-navigation .nav-next a:after,
-    .comment-navigation .nav-previous a:before,
-    .comment-navigation .nav-next a:after {
-      font-size: 14px;
-    }
-    .custom-logo {
-      display: inline;
-      max-height: 124px;
-    }
-    .site-branding {
-      text-align: center;
-    }
-    .entry-footer {
-      padding: 2% 10%;
-    }
-  }
-/* --- Desktop Medium 1100px --- */
-  @media screen and (min-width: 68.75em){
-    body,
-    button,
-    input,
-    select,
-    textarea {
-      font-size: 16px;
-      font-size: 1.6rem;
-    }
-    blockquote {
-      font-size: 18px;
-      font-size: 1.8rem;
-    }
-    .image-navigation .nav-previous a:before,
-    .image-navigation .nav-next a:after,
-    .comment-navigation .nav-previous a:before,
-    .comment-navigation .nav-next a:after {
-      font-size: 16px;
-    }
-    .site-branding {
-        text-align: center;
-    }
-    .site-title {
-        font-size: 22px;
-        font-size: 2.2rem;
-        line-height: 1.1667;
-    }
-    .site-description {
-        font-size: 10px;
-        font-size: 1.0rem;
-    }
-    .entry-title,
-    .widecolumn h2 {
-      font-size: 28px;
-      font-size: 2.8rem;
-    }
-    .entry-content h1,
-    .entry-summary h1,
-    .page-content h1,
-    .comment-content h1 {
-      font-size: 28px;
-      font-size: 2.8rem;
-    }
-    .entry-content h2,
-    .entry-summary h2,
-    .page-content h2,
-    .comment-content h2 {
-      font-size: 24px;
-      font-size: 2.4rem;
-    }
-    .entry-content h3,
-    .entry-summary h3,
-    .page-content h3,
-    .comment-content h3 {
-      font-size: 20px;
-      font-size: 2.0rem;
-    }
-    .entry-content h4,
-    .entry-summary h4,
-    .page-content h4,
-    .comment-content h4 {
-      font-size: 16px;
-      font-size: 1.6rem;
-    }
-    .entry-content h5,
-    .entry-content h6,
-    .entry-summary h5,
-    .entry-summary h6,
-    .page-content h5,
-    .page-content h6,
-    .comment-content h5,
-    .comment-content h6 {
-      font-size: 15px;
-      font-size: 1.5rem;
-    }
-    .entry-content .more-link:after,
-    .entry-summary .more-link:after {
-      font-size: 14px;
-    }
-    .main-navigation {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
-    .main-navigation .menu-item-description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      line-height: 1.3385;
-      margin-top: 0.2077em;
-    }
-    .pagination .prev:before,
-    .pagination .next:before {
-      height: 52px;
-      line-height: 52px;
-      width: 52px;
-    }
-    .pagination .prev, .pagination .next {
-      height: 52px;
-      padding: 0;
-      width: 52px;
-    }
-  }
-/* --- Desktop Large 1240px --- */
-  @media screen and (min-width: 77.5em){
-    body,
-    button,
-    input,
-    select,
-    textarea {
-      font-size: 16px;
-      font-size: 1.6rem;
-    }
-    blockquote {
-      font-size: 18px;
-      font-size: 1.8rem;
-    }
-    .image-navigation .nav-previous a:before,
-    .image-navigation .nav-next a:after,
-    .comment-navigation .nav-previous a:before,
-    .comment-navigation .nav-next a:after {
-      font-size: 14px;
-    }
-    .site-branding {
-        text-align: center;
-    }
-    .site-title {
-        font-size: 24px;
-        font-size: 2.4rem;
-        line-height: 1.1852;
-    }
-    .site-description {
-        font-size: 12px;
-        font-size: 1.2rem;
-    }
-    .post-password-form label,
-    .post-navigation .meta-nav,
-    .comment-navigation,
-    .image-navigation,
-    .author-heading,
-    .author-bio,
-    .entry-footer,
-    .page-links a,
-    .page-links span,
-    .comment-metadata,
-    .pingback .edit-link,
-    .comment-list .reply,
-    .comment-notes,
-    .comment-awaiting-moderation,
-    .logged-in-as,
-    .comment-form label,
-    .form-allowed-tags,
-    .site-info,
-    .wp-caption-text,
-    .gallery-caption,
-    .entry-caption,
-    .widecolumn label,
-    .widecolumn .mu_register label {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
-    .entry-title,
-    .widecolumn h2 {
-      font-size: 28px;
-      font-size: 2.8rem;
-    }
-    .entry-content h1,
-    .entry-summary h1,
-    .page-content h1,
-    .comment-content h1 {
-      font-size: 28px;
-      font-size: 2.8rem;
-    }
-    .entry-content h2,
-    .entry-summary h2,
-    .page-content h2,
-    .comment-content h2 {
-      font-size: 24px;
-      font-size: 2.4rem;
-    }
-    .entry-content h3,
-    .entry-summary h3,
-    .page-content h3,
-    .comment-content h3 {
-      font-size: 20px;
-      font-size: 2.0rem;
-    }
-    .entry-content h4,
-    .entry-summary h4,
-    .page-content h4,
-    .comment-content h4 {
-      font-size: 16px;
-      font-size: 1.6rem;
-    }
-    .entry-content h5,
-    .entry-content h6,
-    .entry-summary h5,
-    .entry-summary h6,
-    .page-content h5,
-    .page-content h6,
-    .comment-content h5,
-    .comment-content h6 {
-      font-size: 15px;
-      font-size: 1.5rem;
-    }
-    .entry-content .more-link:after,
-    .entry-summary .more-link:after {
-      font-size: 14px;
-    }
-    .main-navigation {
-      font-size: 14px;
-      font-size: 1.4rem;
-    }
-    .main-navigation .menu-item-description {
-      font-size: 12px;
-      font-size: 1.2rem;
-      line-height: 1.3385;
-      margin-top: 0.2077em;
-    }
-    .pagination .prev:before,
-    .pagination .next:before {
-      height: 54px;
-      line-height: 54px;
-      width: 54px;
-    }
-    .pagination .prev, .pagination .next {
-      height: 54px;
-      padding: 0;
-      width: 54px;
-    }
-  }
-/* --- Desktop X-Large 1403px --- */
-  @media screen and (min-width: 87.6875em) {
-
-  }
